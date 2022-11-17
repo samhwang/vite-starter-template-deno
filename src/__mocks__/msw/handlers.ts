@@ -1,4 +1,4 @@
-import { rest } from 'msw';
+import { rest } from 'npm:msw';
 
 export const handlers = [
   rest.get('/test', (req, res, ctx) => {

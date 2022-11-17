@@ -1,7 +1,7 @@
-import matchers, { TestingLibraryMatchers } from '@testing-library/jest-dom/matchers';
-import { cleanup } from '@testing-library/react';
-import { beforeAll, afterAll, afterEach, expect } from 'vitest';
-import { server } from './__mocks__/msw/server';
+import matchers, { TestingLibraryMatchers } from 'npm:@testing-library/jest-dom/matchers';
+import { cleanup } from 'npm:@testing-library/react';
+import { afterAll, afterEach, beforeAll, expect } from 'npm:vitest';
+import { server } from './__mocks__/msw/server.ts';
 
 declare global {
   namespace Vi {

@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "strict": true,
+    "jsx": "react-jsx",
+    "lib": ["dom", "dom.iterable", "dom.asynciterable", "deno.ns"],
+    "types": ["vite/client", "vitest"]
+  },
+  "lint": {
+    "files": {
+      "include": ["src", "vite.config.ts"],
+      "exclude": ["build", "coverage"]
+    },
+    "rules": {
+      "tags": ["recommended"],
+      "exclude": ["no-explicit-any"]
+    }
+  },
+  "fmt": {
+    "files": {
+      "include": ["src", "vite.config.ts"],
+      "exclude": ["build", "coverage"]
+    },
+    "options": {
+      "useTabs": false,
+      "lineWidth": 120,
+      "indentWidth": 2,
+      "singleQuote": true
+    }
+  },
+  "test": {
+    "files": {
+      "include": ["src"],
+      "exclude": ["build", "coverage"]
+    }
+  },
+  "tasks": {
+    "install": "deno cache --node-modules-dir deps.ts dev_deps.ts",
+    "vite": "deno run --allow-all --node-modules-dir npm:vite",
+    "dev": "deno task vite dev",
+    "prebuild": "rm -rf dist",
+    "build": "deno task vite build",
+    "pretest": "rm -rf coverage",
+    "test": "deno task pretest && deno run --allow-all --node-modules-dir npm:vitest run",
+    "fileserver": "deno run --allow-net --allow-read https://deno.land/std@0.157.0/http/file_server.ts",
+    "serve": "deno task fileserver dist/"
+  }
+}

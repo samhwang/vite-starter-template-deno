@@ -1,6 +1,6 @@
-import { describe, it, expect } from 'vitest';
-import { fireEvent, render, screen } from '@testing-library/react';
-import App from './app';
+import { describe, expect, it } from 'npm:vitest';
+import { fireEvent, render, screen } from 'npm:@testing-library/react';
+import App from './app.tsx';
 
 describe('App component', () => {
   it('increase the state number button when click', () => {
