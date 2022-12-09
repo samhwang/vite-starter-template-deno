@@ -4,11 +4,6 @@ import './index.css';
 import App from './app.tsx';
 import reportWebVitals from './reportWebVitals.ts';
 
-// if (import.meta.env.DEV) {
-//   const { worker } = await import('./__mocks__/msw/browser.ts');
-//   await worker.start();
-// }
-
 const RootComponent = (
   <StrictMode>
     <App />

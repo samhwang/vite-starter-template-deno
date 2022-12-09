@@ -4,7 +4,7 @@
     "strict": true,
     "jsx": "react-jsx",
     "lib": ["dom", "dom.iterable", "dom.asynciterable", "deno.ns"],
-    "types": ["vite/client", "vitest"]
+    "types": ["vite/client"]
   },
   "lint": {
     "files": {
@@ -35,13 +35,11 @@
     }
   },
   "tasks": {
-    "install": "deno cache --node-modules-dir deps.ts dev_deps.ts",
+    "install": "deno cache --node-modules-dir vite.config.mts",
     "vite": "deno run --allow-all --node-modules-dir npm:vite",
     "dev": "deno task vite dev",
     "prebuild": "rm -rf dist",
     "build": "deno task vite build",
-    "pretest": "rm -rf coverage",
-    "test": "deno task pretest && deno run --allow-all --node-modules-dir npm:vitest run",
     "fileserver": "deno run --allow-net --allow-read https://deno.land/std@0.157.0/http/file_server.ts",
     "serve": "deno task fileserver dist/"
   }

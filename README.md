@@ -15,8 +15,11 @@ There are 3 ways that you can adopt this template.
 
 - [Vite](https://vitejs.dev/), [React](https://reactjs.org) and [TypeScript](https://www.typescriptlang.org/) - The core of this template.
 - [Deno](https://deno.land) - A modern JS runtime.
-- [msw](https://mswjs.io/) to fake a service worker request to intercept API calls.
 - [GitHub Actions](https://github.com/features/actions) pipeline to deploy into [GitHub Pages](https://pages.github.com/).
+
+## Side note
+
+- **Testing isn't available yet**: Currently there's no clear way of testing React with Deno. I'll update this when there are any changes.
 
 ## Available Scripts
 
