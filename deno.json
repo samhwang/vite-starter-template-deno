@@ -35,7 +35,7 @@
     }
   },
   "tasks": {
-    "install": "deno cache --node-modules-dir vite.config.mts",
+    "install": "deno cache --lock-write --reload --node-modules-dir vite.config.mts",
     "vite": "deno run --allow-all --node-modules-dir npm:vite",
     "dev": "deno task vite dev",
     "prebuild": "rm -rf dist",
