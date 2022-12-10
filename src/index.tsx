@@ -1,5 +1,5 @@
-import { StrictMode } from 'npm:react';
-import { createRoot } from 'npm:react-dom/client';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './app.tsx';
 import reportWebVitals from './reportWebVitals.ts';
