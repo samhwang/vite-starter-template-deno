@@ -14,12 +14,14 @@ There are 3 ways that you can adopt this template.
 ## Batteries included
 
 - [Vite](https://vitejs.dev/), [React](https://reactjs.org) and [TypeScript](https://www.typescriptlang.org/) - The core of this template.
+- [swc](https://swc.rs/) - A speedy JS bundler using Rust.
 - [Deno](https://deno.land) - A modern JS runtime.
 - [GitHub Actions](https://github.com/features/actions) pipeline to deploy into [GitHub Pages](https://pages.github.com/).
 
 ## Side note
 
 - **Testing isn't available yet**: Currently there's no clear way of testing React with Deno. I'll update this when there are any changes.
+- **`swc` by default**: This template will enable `swc` by default. But there are some caveats (https://github.com/vitejs/vite-plugin-react-swc#caveats). If your project breaks in some way, you can toggle it off in `vite.config.ts`.
 
 ## Available Scripts
 
